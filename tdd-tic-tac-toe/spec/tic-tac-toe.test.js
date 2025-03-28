@@ -1,6 +1,6 @@
 const TicTacToeGame = require('../tic-tac-toe')
 
-/*USE THIS: https://github.com/murphyl337/TicTacToe/blob/master/js/specs/tttSpec.js*/ 
+/*USE THIS: https://github.com/murphyl337/TicTacToe/blob/master/js/specs/tttSpec.js*/
 
 
 describe('Tic Tac Toe Game', () => {
@@ -11,37 +11,37 @@ describe('Tic Tac Toe Game', () => {
   })
 
 
-  // it("should allow users to add two players", () => {
-  //   let game = new TicTacToeGame();
-    
-  //   game.addPlayer("Player 1")
-  //   game.addPlayer("Player 2")
+  it("should allow users to add two players", () => {
+    let game = new TicTacToeGame();
 
-  //   expect(game.getPlayers()).toEqual(["Player 1", "Player 2"])
-  // });
+    game.addPlayer("Player 1")
+    game.addPlayer("Player 2")
 
-
-  // it('should not allow you to add more than 2 players', () => {
-  //   let game = new TicTacToeGame();
-
-  //   game.addPlayer("Player 1")
-  //   game.addPlayer("Player 2")
-
-  //   expect(game.getPlayers()).toEqual(["Player 1", "Player 2"])
-  //   expect(game.addPlayer("Player 3")).toEqual("Maximum number of players exceeded.")
-  // })
+    expect(game.getPlayers()).toEqual(["Player 1", "Player 2"])
+  });
 
 
-  // it('should assign each player a symbol: X or O', () => {
-  //   let game = new TicTacToeGame();
+  it('should not allow you to add more than 2 players', () => {
+    let game = new TicTacToeGame();
 
-  //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O")
-  //   expect(game.getPlayerSymbols()).toEqual([
-  //     { player: "Player 1", symbol: "X" }, 
-  //     { player: "Player 2", symbol: "O" }
-  //   ])
-  // })
+    game.addPlayer("Player 1")
+    game.addPlayer("Player 2")
+
+    expect(game.getPlayers()).toEqual(["Player 1", "Player 2"])
+    expect(game.addPlayer("Player 3")).toEqual("Maximum number of players exceeded.")
+  })
+
+
+  it('should assign each player a symbol: X or O', () => {
+    let game = new TicTacToeGame();
+
+    game.addPlayer("Player 1", "X")
+    game.addPlayer("Player 2", "O")
+    expect(game.getPlayerSymbols()).toEqual([
+      { player: "Player 1", symbol: "X" },
+      { player: "Player 2", symbol: "O" }
+    ])
+  })
 
 
   // it("should initialize with 9 spaces", () => {
@@ -54,7 +54,7 @@ describe('Tic Tac Toe Game', () => {
   // it("should change the mark on a space when updated", function(){
   //   let game = new TicTacToeGame()
   //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O") 
+  //   game.addPlayer("Player 2", "O")
 
   //   game.updateBoard("Player 1", 0);
   //   expect(game.spaces[0]).toBe("X");
@@ -69,7 +69,7 @@ describe('Tic Tac Toe Game', () => {
   //   expect(game.getAvailableSpaces().length).toBe(9);
 
   //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O") 
+  //   game.addPlayer("Player 2", "O")
 
   //   game.updateBoard("Player 1", 5);
   //   game.updateBoard("Player 2", 2);
@@ -84,7 +84,7 @@ describe('Tic Tac Toe Game', () => {
   //   expect(game.getPlayerMoves()).toEqual("There have been no moves.")
 
   //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O") 
+  //   game.addPlayer("Player 2", "O")
 
   //   game.updateBoard("Player 1", 5);
   //   game.updateBoard("Player 2", 2);
@@ -99,7 +99,7 @@ describe('Tic Tac Toe Game', () => {
   //   let game = new TicTacToeGame();
 
   //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O") 
+  //   game.addPlayer("Player 2", "O")
 
   //   game.updateBoard("Player 1", 5);
   //   game.updateBoard("Player 2", 2);
@@ -115,7 +115,7 @@ describe('Tic Tac Toe Game', () => {
   //   let game = new TicTacToeGame();
 
   //   game.addPlayer("Player 1", "X")
-  //   game.addPlayer("Player 2", "O") 
+  //   game.addPlayer("Player 2", "O")
 
   //   game.updateBoard("Player 1", 0);
   //   game.updateBoard("Player 2", 1);
